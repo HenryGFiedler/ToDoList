@@ -1,54 +1,54 @@
 # Documentação das Funções
 
-## `tarefa.dart`
+## tarefa.dart
 
-### `Tarefa`
+### Tarefa
 Classe que representa uma tarefa com os seguintes atributos:
-- `String nome`: Nome da tarefa.
-- `bool concluida`: Indica se a tarefa foi concluída.
+- **String nome**: Nome da tarefa.
+- **bool concluida**: Indica se a tarefa foi concluída.
 
-### `getNome()`
-1. Retorna o nome da tarefa.
+### getNome()
+- Retorna o nome da tarefa.
 
-### `setNome(String novoNome)`
-1. Atualiza o nome da tarefa para o valor passado como parâmetro.
+### setNome(String novoNome)
+- Atualiza o nome da tarefa para o valor passado como parâmetro.
 
-### `getStatus()`
-1. Retorna `true` se a tarefa estiver concluída, `false` caso contrário.
+### getStatus()
+- Retorna true se a tarefa estiver concluída, false caso contrário.
 
-### `setStatus(bool novoStatus)`
-1. Atualiza o status da tarefa para `true` (concluída) ou `false` (pendente).
+### setStatus(bool novoStatus)
+- Atualiza o status da tarefa para true (concluída) ou false (pendente).
 
-### `concluir()`
-1. Define o status da tarefa como `true`, indicando que foi concluída.
+### concluir()
+- Define o status da tarefa como true, indicando que foi concluída.
 
-### `checarStatus()`
-1. Retorna uma string informando se a tarefa está pendente ou concluída.
+### checarStatus()
+- Retorna uma string informando se a tarefa está pendente ou concluída.
 
-## `gerenciador_tarefas.dart`
+## gerenciador_tarefas.dart
 
-### `adicionarTarefa(List<Tarefa> tarefas, String nome)`
-1. Cria uma nova instância da classe `Tarefa` com o nome fornecido.
-2. Adiciona a nova tarefa à lista de tarefas.
+### adicionarTarefa(List<Tarefa> tarefas, String nome)
+> - Cria uma nova instância da classe Tarefa com o nome fornecido.
+- Adiciona a nova tarefa à lista de tarefas.
 
-### `listarTarefas(List<Tarefa> tarefas)`
-1. Percorre a lista de tarefas.
-2. Para cada tarefa, imprime seu nome e status no terminal.
+### listarTarefas(List<Tarefa> tarefas)
+- Percorre a lista de tarefas.
+- Para cada tarefa, imprime seu nome e status no terminal.
 
-### `concluirTarefa(List<Tarefa> tarefas, String nome)`
-1. Percorre a lista de tarefas buscando uma tarefa com o nome fornecido.
-2. Se encontrada, chama o método `concluir()` para marcar a tarefa como concluída.
-3. Exibe uma mensagem informando se a tarefa foi concluída com sucesso ou não encontrada.
+### concluirTarefa(List<Tarefa> tarefas, String nome)
+- Percorre a lista de tarefas buscando uma tarefa com o nome fornecido.
+- Se encontrada, chama o método concluir() para marcar a tarefa como concluída.
+- Exibe uma mensagem informando se a tarefa foi concluída com sucesso ou não encontrada.
 
-### `removerTarefa(List<Tarefa> tarefas, String nome)`
-1. Procura na lista uma tarefa com o nome informado.
-2. Se encontrada, remove a tarefa da lista.
-3. Exibe uma mensagem informando se a tarefa foi removida ou não encontrada.
+### removerTarefa(List<Tarefa> tarefas, String nome)
+- Procura na lista uma tarefa com o nome informado.
+- Se encontrada, remove a tarefa da lista.
+- Exibe uma mensagem informando se a tarefa foi removida ou não encontrada.
 
-## `menu.dart`
+## menu.dart
 
-### `menu()`
-1. Exibe um menu no terminal apresentando opções ao usuário.
-2. Aguarda a entrada do usuário para selecionar uma ação.
-3. Com base na entrada, chama uma das funções do `gerenciador_tarefas.dart` para adicionar, listar, concluir ou remover uma tarefa.
-4. O menu é exibido novamente até que o usuário opte por sair.
+### menu()
+- Exibe um menu no terminal apresentando opções ao usuário.
+- Aguarda a entrada do usuário para selecionar uma ação.
+- Com base na entrada, chama uma das funções do gerenciador_tarefas.dart para adicionar, listar, concluir ou remover uma tarefa.
+- O menu é exibido novamente até que o usuário opte por sair.
