@@ -28,7 +28,7 @@ Classe que representa uma tarefa com os seguintes atributos:
 ## gerenciador_tarefas.dart
 
 ### adicionarTarefa(List<Tarefa> tarefas, String nome)
-> - Cria uma nova instância da classe Tarefa com o nome fornecido.
+- Cria uma nova instância da classe Tarefa com o nome fornecido.
 - Adiciona a nova tarefa à lista de tarefas.
 
 ### listarTarefas(List<Tarefa> tarefas)
