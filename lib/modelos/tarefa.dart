@@ -17,7 +17,7 @@ class Tarefa {
   /**Mostra o status da tarefa */
   void checarStatus() {
     print(
-      "Tarefa: $_nome\nStatus: ${_status ? "Concluido" : "Pendente"}\n=====\n",
+      '\nTarefa: $_nome\nStatus: ${_status ? "Concluido" : "Pendente"}\n=====',
     );
   }
 }

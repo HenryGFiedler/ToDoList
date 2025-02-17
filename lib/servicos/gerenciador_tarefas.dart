@@ -1,6 +1,7 @@
 import 'dart:io';
 import '../modelos/tarefa.dart';
 
+/**Função responsável por adicionar uma tarefa*/
 void adicionarTarefa(List<Tarefa> tarefas) {
   Tarefa tarefa = Tarefa();
   String? nomeTarefa;
@@ -19,6 +20,7 @@ void adicionarTarefa(List<Tarefa> tarefas) {
   print('Tarefa adicionada!\n');
 }
 
+/**Função responsável por listar todas as tarefas*/
 void listarTarefas(List<Tarefa> tarefas) {
   if (!tarefas.isEmpty) {
     tarefas.forEach((tarefa) => tarefa.checarStatus());
@@ -27,6 +29,7 @@ void listarTarefas(List<Tarefa> tarefas) {
   }
 }
 
+/**Função responsável por conlcuir uma tarefa*/
 void concluirTarefa(List<Tarefa> tarefas) {
   String? nomeTarefa;
 
@@ -43,13 +46,18 @@ void concluirTarefa(List<Tarefa> tarefas) {
     Tarefa tarefaConcluida = tarefas.firstWhere(
       (tarefa) => tarefa.getNome?.toLowerCase() == nomeTarefa?.toLowerCase(),
     );
-    tarefaConcluida.concluir();
-    print("Tarefa concluída!\n");
+    if (tarefaConcluida.getStatus != true) {
+      tarefaConcluida.concluir();
+      print('Tarefa concluída!\n');
+    } else {
+      print('Tarefa já concluída.\n');
+    }
   } catch (erro) {
     print('Tarefa não encontrada.\n');
   }
 }
 
+/**Função responsável por remover uma tarefa*/
 void removerTarefa(List<Tarefa> tarefas) {
   String? nomeTarefa;
 
@@ -71,7 +79,7 @@ void removerTarefa(List<Tarefa> tarefas) {
   int tarefasDepois = tarefas.length;
 
   if (tarefasAntes > tarefasDepois) {
-    print("Tarefa removida.\n");
+    print('Tarefa removida.\n');
   } else {
     print('Tarefa não encontrada.\n');
   }
